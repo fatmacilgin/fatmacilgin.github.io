@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>SEBZE DÖNGÜSÜ</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+
+            body {
+                background-image: url(resim/yesil.jpg);
+                background-position: center;
+                background-size: cover;
+                margin:0;
+                padding: 0;
+            }
+            .sebze {
+                background-color: white;
+            }
+            .home {
+                background-color: white;
+            }
+            .yemek {
+                background-color: darkkhaki;
+            }
+        </style>
+    </head>
+
+    <body>
+
+
+        <ul class="menu">
+            <li class="moti" ><a href="motivasyon.html">Motivasyon Makaleleri</a></li>
+            <li class="diyet" id="d"><a href="diyettarifleri.html">Diyet Tarifleri</a></li>
+            <li class="yemek" id="y"><a href="yemektarifleri.html">Yemek Tarifleri</a></li>
+            <li class="sebze" id="s"><a href="sebzelerhakkinda.html">Sebzeler Hakkında</a></li>
+            <li class="home" id="b"><a href="anasayfa.html">Anasayfa </a> </li>
+            
+            </ul>
+
+
+            <div class="kategori" style="margin-top: 10px;">
+                <select onchange="window.location.href=this.value;" class="secim">
+                    <option class="sec" value="yemektarifleri.html">Seçiniz..</option>
+                    <option selected value="fırıntarifi.html">Fırın Kullanılan Tarifler</option>
+                    <option  value="ocaktarifi.html">Ocak Kullanılan Tarifler</option>
+                    
+                    </select>
+                </div>
+
+            <section class="tarif" >
+                <div class="box-container" style="margin-top: 80px;">
+                    <div class="box">
+                            <img src="resim/bebekp.jpg" class="foto">
+                            <button class="button"><a href="tarif1.html" class="baslik" >Fırında Bebek Patates<a></button>
+                    </div>
+    
+                    <div class="box">
+                        <img src="resim/muffin.jpg" class="foto">
+                        <button class="button"><a href="tarif2.html" class="baslik">Elmalı Tarçınlı Muffin</a></button>
+                    </div>
+    
+                    <div class="box">
+                        <img src="resim/ekmek.jpg" class="foto">
+                        <button class="button"><h4 class="baslik">Meyveli Ekmek</h2></button>
+                    </div>
+    
+    
+                    <div class="box">
+                        <img src="resim/lazanya.jpg" class="foto">
+                        <button class="button"><h4 class="baslik">Lazanya</h2></button>
+                    </div>
+    
+                    <div class="box">
+                        <img src="resim/pizzaa.jpg" class="foto">
+                        <button class="button"><h4 class="baslik">Karışık Pizza</h2></button>
+                    </div>
+
+                </div>
+
+                </section>
+            
+
+    </body>
+</html>
