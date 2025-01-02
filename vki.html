@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title>Vücut Kitle İndeksi</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .vki {
+            background-color: darkkhaki;
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <ul class="menu">
+        <li class="vki"><a href="vki.html">Vücut Kitle İndeksi Hesaplama</a></li>
+        <li class="diyet" id="d"><a href="diyettarifleri.html">Diyet Yemekleri ve Kalori Hesaplama</a></li>
+        <li class="yemek" id="y"><a href="yemektarifleri.html">Yemek Tarifleri</a></li>
+        <li class="sebze" id="s"><a href="sebzelerhakkinda.html">Sebzeler Hakkında</a></li>
+        <li class="home" id="b"><a href="anasayfa.html">Anasayfa </a></li>
+    </ul>
+
+    <div class="vki-hesap">
+        <h2>Vücut Kitle İndeksi (BMI) Hesaplama</h2>
+        <label for="boy">Boy (cm):</label>
+        <input type="number" id="boy" placeholder="Boyunuzu girin (örn: 170)">
+        <br>
+        <label for="kilo">Kilo (kg):</label>
+        <input type="number" id="kilo" placeholder="Kilonuzu girin (örn: 70)">
+        <br>
+        <button id="vkiHesapla">Hesapla</button>
+        <div id="vkiSonuc"></div>
+    </div>
+
+    <script>
+        document.getElementById("vkiHesapla").addEventListener("click", function () {
+            const boy = parseFloat(document.getElementById("boy").value);
+            const kilo = parseFloat(document.getElementById("kilo").value);
+            const sonucDiv = document.getElementById("vkiSonuc");
+
+            if (boy > 0 && kilo > 0) {
+                const boyMetre = boy / 100;
+                const vki = (kilo / (boyMetre * boyMetre)).toFixed(2);
+
+                let yorum;
+                if (vki < 18.5) yorum = "Zayıf";
+                else if (vki < 24.9) yorum = "Normal";
+                else if (vki < 29.9) yorum = "Kilolu";
+                else yorum = "Obez";
+
+                sonucDiv.innerHTML = `<p>Vücut Kitle İndeksiniz: <strong>${vki}</strong></p>
+                                     <p>Durumunuz: <strong>${yorum}</strong></p>`;
+            } else {
+                sonucDiv.innerHTML = `<p>Lütfen geçerli bir boy ve kilo değeri giriniz.</p>`;
+            }
+        });
+    </script>
+  
+        <p id="giris"><b>Vücut Kitle İndeksi;</b> Vücut kitle indeksi (VKİ), vücut kütlesinin (kg), uzunluğunun 
+            metre cinsinden karesine bölünmesiyle hesaplanır. İdeal ağırlık ise ulaşılmak istenen VKİ'nin, boy uzunluğunun 
+            karesi ile çarpılmasıyla elde edilir.</p>
+ 
+</body>
+</html>

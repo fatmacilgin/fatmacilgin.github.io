@@ -1,0 +1,36 @@
+
+<head>
+    <title>Yemek Tarifleri</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+     .yemek {
+            background-color: darkkhaki;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Yemek Tarifleri</h1>
+    <ul class="menu">
+        <li class="vki"><a href="vki.html">Vücut Kitle İndeksi Hesaplama</a></li>
+        <li class="diyet" id="d"><a href="diyettarifleri.html">Diyet Yemekleri ve Kalori Hesaplama</a></li>
+        <li class="yemek" id="y"><a href="yemektarifleri.html">Yemek Tarifleri</a></li>
+        <li class="sebze" id="s"><a href="sebzelerhakkinda.html">Sebzeler Hakkında</a></li>
+        <li class="home" id="b"><a href="anasayfa.html">Anasayfa </a></li>
+    </ul>
+    <!-- Filtreleme Combobox -->
+    <div id="filters">
+        <label for="recipe-filter">Kategori Seçin:</label>
+        <select id="recipe-filter">
+            <option value="all">Tüm Tarifler</option>
+            <option value="firin">Fırın Yemekleri</option>
+            <option value="ocak">Ocak Yemekleri</option>
+        </select>
+    </div>
+    <!-- Tariflerin Görüntüleneceği Alan -->
+    <div id="recipe-container"></div>
+    <!-- JavaScript Dosyası -->
+    <script src="yemek.js"></script>
+</body>
+
+</html>
