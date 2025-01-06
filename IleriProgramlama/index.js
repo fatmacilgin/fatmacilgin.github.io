@@ -84,7 +84,7 @@ const mealsMap = {
         },
         {
             name: 'Zeytinyağlı Kabak Yemeği',
-            image: 'resim/firinda_kabak_yemegi1.jpg',
+            image: 'resim/kabakyemek.jpg',
             ingredients: ['kabak', 'soğan', 'zeytinyağı'],
             recipe: 'Kabak ve soğanları doğrayıp zeytinyağında kavurun.'
         },
