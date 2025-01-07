@@ -174,7 +174,7 @@ const mealList = document.getElementById('recipe-container');
 
 // Yemekleri kategoriye göre görüntüle
 function displayMeals(category = 'all') {
-    mealList.innerHTML = ''; // temizle
+    mealList.innerHTML = ''; // Clear current meal list
 
     let recipesToShow = [];
     if (category === 'firin') {
@@ -193,10 +193,12 @@ function displayMeals(category = 'all') {
             <h3>${recipe.name}</h3>
             <p>Malzemeler: ${recipe.ingredients.join(', ')}</p>
             <p>Tarif: ${recipe.recipe}</p>
+            <button onclick="addToFavorites('${recipe.name}')">Favorilere Ekle</button>
         `;
         mealList.appendChild(mealDiv);
     });
 }
+
 
 // Seçilen malzemelere göre yemekleri filtreleme
 function filterMeals() {
