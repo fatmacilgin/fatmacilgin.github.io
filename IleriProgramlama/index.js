@@ -338,14 +338,6 @@ if (hesaplaButton) {
     });
 }
 
-const recipeFilter = document.getElementById('recipe-filter');
-if (recipeFilter) {
-    recipeFilter.addEventListener('change', (event) => {
-        const selectedCategory = event.target.value;
-        displayMeals(selectedCategory);
-    });
-}
-
 function clearFilters() {
     checkboxes.forEach(checkbox => checkbox.checked = false);
     displayMeals();
